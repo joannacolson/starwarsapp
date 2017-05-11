@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="StarWarsApp">
+
+<head>
+    <title>Star Wars App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-resource.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+
+<body ng-controller="FilmsCtrl">
+    <div>
+        <input type="integer" ng-model="movieId">
+        <button ng-click="getMovie(movieId)">Get</button>
+        <button ng-click="getAll()">All</button>
+    </div>
+    <div ng-if="loading">
+        Loading...
+    </div>
+    <div ng-if="!loading" ng-repeat="film in films" class="well">
+        <h2>{{film.title}}</h2>
+        <p>{{film.opening_crawl}}</p>
+    </div>
+</body>
+
+</html>

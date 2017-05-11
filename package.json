@@ -1,0 +1,24 @@
+{
+  "name": "starwarsapp",
+  "version": "1.0.0",
+  "description": "Star Wars AngularJS codealong application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node_modules/browser-sync/bin/browser-sync.js start --server . --files ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joannacolson/starwarsapp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joannacolson/starwarsapp/issues"
+  },
+  "homepage": "https://github.com/joannacolson/starwarsapp#readme",
+  "dependencies": {
+    "browser-sync": "^2.18.8"
+  }
+}
